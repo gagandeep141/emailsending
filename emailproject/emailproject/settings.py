@@ -9,6 +9,9 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
+import environ 
+env=environ.Env()
+environ.Env.read_env()
 
 from pathlib import Path
 
@@ -123,8 +126,11 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST=''
+EMAIL_HOST=env('EMAIL_HOST')
 EMAIL_PORT=587
 EMAIL_USE_TLS=True
-EMAIL_HOST_USER=''
-EMAIL_HOST_PASSWORD=''
+EMAIL_HOST_USER=env('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD=env('EMAIL_HOST_PASSWORD')
+
+# custom settings to email
+RECIPIENT_ADDRESS = env('RECIPIENT_ADDRESS')
