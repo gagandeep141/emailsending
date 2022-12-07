@@ -9,5 +9,12 @@ Everything you do here is contained within this one codespace. There is no repos
 To run this application:
 
 ```
-python manage.py runserver
+python manage.py shell
+```
+```
+send_mail(
+...     subject='A cool subject',
+...     message='A stunning message',
+...     from_email=settings.EMAIL_HOST_USER,
+...     recipient_list=[settings.RECIPIENT_ADDRESS])
 ```
