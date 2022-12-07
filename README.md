@@ -12,6 +12,8 @@ To run this application:
 python manage.py shell
 ```
 ```
+from django.core.mail import send_mail
+from django.conf import settings
 send_mail(
 ...     subject='A cool subject',
 ...     message='A stunning message',
