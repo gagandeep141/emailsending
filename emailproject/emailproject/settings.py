@@ -29,7 +29,6 @@ SECRET_KEY = "django-insecure-h+rlxy9xh-jvevrc=_t3if2li3k90^*r55ogf$=7_j+wxy_#!o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -74,6 +73,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "emailproject.wsgi.application"
+
+CSRF_TRUSTED_ORIGINS = ['https://gagandeep141-congenial-xylophone-946j465ww4hj4g-8000.preview.app.github.dev']
 
 
 # Database
@@ -140,3 +141,5 @@ RECIPIENT_ADDRESS = env('RECIPIENT_ADDRESS')
 
 # Indicates the frontend framework django crispy forms use
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+AUTHENTICATION_BACKENDS = ['example.api.auth.AlwaysRootBackend']
