@@ -12,3 +12,4 @@ To run this application:
 python manage.py runserver
 ```
 
+Currently I am using , My two id's but would soon change it to enter a manual id of anyone to receive a message from my id . Thanks
