@@ -9,14 +9,6 @@ Everything you do here is contained within this one codespace. There is no repos
 To run this application:
 
 ```
-python manage.py shell
+python manage.py runserver
 ```
-```
-from django.core.mail import send_mail
-from django.conf import settings
-send_mail(
-...     subject='A cool subject',
-...     message='A stunning message',
-...     from_email=settings.EMAIL_HOST_USER,
-...     recipient_list=[settings.RECIPIENT_ADDRESS])
-```
+
